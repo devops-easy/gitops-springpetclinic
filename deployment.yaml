@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: springapp
+  template:
+    metadata:
+      labels:
+        run: springapp
+    spec:
+      containers:
+      - name: springapp
+        image: devopseasy/spring-petclinic-pro:latest
+        ports:
+          - containerPort: 80
+        imagePullPolicy: IfNotPresent
