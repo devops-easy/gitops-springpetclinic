@@ -17,5 +17,5 @@ spec:
       - name: springapp
         image: devopseasy/spring-petclinic-pro:latest
         ports:
-          - containerPort: 80
+          - containerPort: 8080
         imagePullPolicy: IfNotPresent
