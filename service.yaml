@@ -6,7 +6,7 @@ metadata:
   labels:
     run: springapp
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     run: springapp
   ports:
