@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-          APP_NAME = "reddit-clone-pipeline"
+          APP_NAME = "spring-petclinic-pro"
     }
     stages {
          stage("Cleanup Workspace") {
@@ -32,7 +32,7 @@ pipeline {
                     git commit -m "Updated Deployment Manifest"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                    sh "git push https://github.com/devops-easy/gitops-reddit-clone main"
+                    sh "git push https://github.com/devops-easy/gitops-springpetclinic main"
                 }
             }
          }
